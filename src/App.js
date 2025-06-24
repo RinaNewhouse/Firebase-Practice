@@ -61,8 +61,8 @@ function App() {
 
   // (U) *UPDATE POSTS HERE*
   async function updatePost() {
-    const hardCodedId = "56L5VAiMKs53cYsWGhhf"
-    const postRef = doc(db, "posts", hardCodedId)
+    const hardcodedId = "56L5VAiMKs53cYsWGhhf"
+    const postRef = doc(db, "posts", hardcodedId)
     const post = await getPostById(hardcodedId)
     console.log(post)
     const updatedPost = {
