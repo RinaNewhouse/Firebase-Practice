@@ -40,13 +40,14 @@ function App() {
   async function getAllPosts() {
     const { docs } = await getDocs(collection(db, "posts"))
     const posts = docs.map(elem => ({...elem.data(), id: elem.id}))
+    return posts
   }
 
   // --Read Post By ID Only
   async function getPostById(id) {
     const postRef = doc(db, "posts", id)
     const postSnap = await getDoc(postRef)
-    return post = postSnap.data()
+    return postSnap.data()
   }
 
   // --Read Post By Query Only
